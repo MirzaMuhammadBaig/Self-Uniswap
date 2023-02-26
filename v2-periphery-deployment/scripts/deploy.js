@@ -5,11 +5,11 @@ const WETH_address = "0xB4FBF271143F4FBf7B91A5ded31805e42b2208d6";
 async function main() {
   const UniswapV2Router02 = await hre.ethers.getContractFactory("UniswapV2Router02");
   const uniswapV2Router02 = await UniswapV2Router02.deploy(factory_address, WETH_address);
-  console.log(uniswapV2Router02);
+
   await uniswapV2Router02.deployed();
-  console.log(uniswapV2Router02);
+
   console.log(
-    `Contract address of UniswapV2Router02: ${uniswapV2Router02.address} & transaction hash is ${uniswapV2Router02.TxHash}`
+    `Contract address of UniswapV2Router02: ${uniswapV2Router02.address}`
   );
 };
 
