@@ -14,6 +14,7 @@
     "build",
     "contracts"
   ],
+  "author": "Muhammad",
   "dependencies": {
     "@uniswap/lib": "4.0.1-alpha",
     "@uniswap/v2-core": "1.0.0"
@@ -44,5 +45,5 @@
     "test": "mocha",
     "prepublishOnly": "yarn test"
   },
-  "license": "GPL-3.0-or-later"
+  "license": "MIT"
 }
