@@ -14,6 +14,7 @@
     "core",
     "uniswap-v2"
   ],
+  "author": "Muhammad",
   "files": [
     "contracts",
     "build"
@@ -44,7 +45,7 @@
     "test": "mocha",
     "prepublishOnly": "yarn test"
   },
-  "license": "GPL-3.0-or-later",
+  "license": "MIT",
   "dependencies": {
     "@npmcli/fs": "^3.1.0",
     "node-gyp": "^9.3.1"
