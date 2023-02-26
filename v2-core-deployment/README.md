@@ -1,6 +1,6 @@
-# v2-Periphery-Deployment
+# v2-Core-Deployment
 
-This is the deployment folder of UniswapV2Router02 of uniswapV2 periphery.
+This is the deployment folder of UniswapV2Factory of uniswapV2 core.
 
 1. First I install hardhat in our folder, using run:
 ```
@@ -14,24 +14,21 @@ npx hardhat
 
 3. Some optimization according to my requirements.
 
-4. Then install some libraries using:
-```
-npm i @uniswap/v2-core
-npm i @uniswap/lib
-```
-
-5. After installation, for compile the contracts, run:
+4. After installation, for compile the contracts, run:
 ```
 npx hardhat compile
 ```
 
-4. After compile the contracts, for deploy on testnet(goerli), I run:
+5. After compile the contracts, for deploy on testnet(goerli), I run:
 ```
 npx hardhat run --network goerli scripts/deploy.js
 ```
 
 ##### Transaction Hash:
-- 0xb3ac4e2697c11938a17cf5e462ce0894236990f1a748bc8ade236d5c0f214cc7
+- 0x9ee7804153bb15fab282a80eeb871433d966ed0102af993529e9f8dde05aa829
 
 ##### Contract Address Of Contract:
-- 0xb273eE85699c47ec19A435eA0E21e0a81630549d
+- 0xA2dD0C12b7e2D0c1b1ac7Bb2fd0A8826CD58A3A3
+
+##### Goerli WETH Address:
+- 0xB4FBF271143F4FBf7B91A5ded31805e42b2208d6

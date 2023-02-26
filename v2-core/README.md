@@ -1,24 +1,53 @@
-# Uniswap V2
+# ABOUT UNISWAP-V2 CORE CONTRACTS:
 
-[![Actions Status](https://github.com/Uniswap/uniswap-v2-core/workflows/CI/badge.svg)](https://github.com/Uniswap/uniswap-v2-core/actions)
-[![Version](https://img.shields.io/npm/v/@uniswap/v2-core)](https://www.npmjs.com/package/@uniswap/v2-core)
+## After deploying the UniswapV2 Factory contract, the following functions become available:
 
-In-depth documentation on Uniswap V2 is available at [uniswap.org](https://uniswap.org/docs).
+### createPair(address tokenA, address tokenB) 
+- This function creates a new pair for the two tokens specified. The pair will be used for trading on UniswapV2.
 
-The built contract artifacts can be browsed via [unpkg.com](https://unpkg.com/browse/@uniswap/v2-core@latest/).
+### getPair(address tokenA, address tokenB) 
+- This function returns the address of the pair created for the two tokens specified.
 
-# Local Development
+### setFeeTo(address _feeTo) 
+- This function sets the address to which trading fees will be sent.
 
-The following assumes the use of `node@>=10`.
+### setFeeToSetter(address _feeToSetter) 
+- This function sets the address that can change the feeTo address.
 
-## Install Dependencies
+### feeTo() 
+- This function returns the address to which trading fees will be sent.
 
-`yarn`
+### feeToSetter() 
+- This function returns the address that can change the feeTo address.
 
-## Compile Contracts
+### allPairs 
+- This variable is an array that contains the addresses of all the pairs that have been created through the createPair() function.
 
-`yarn compile`
+### allPairsLength 
+- This variable is an integer that represents the length of the allPairs array.
 
-## Run Tests
+## Here's a guide for each function:
 
-`yarn test`
+### createPair(address tokenA, address tokenB) 
+- This function creates a new pair for the two tokens specified. The function takes two arguments, which are the addresses of the two tokens to be paired. The function then checks if the pair already exists, and if not, it creates a new pair and returns the pair's address.
+
+### getPair(address tokenA, address tokenB) 
+- This function takes two arguments, which are the addresses of the two tokens that form the pair. It then returns the address of the pair that was created for these tokens. If the pair doesn't exist, the function returns the zero address.
+
+### setFeeTo(address _feeTo) 
+- This function takes one argument, which is the address to which trading fees will be sent. The address is stored in the contract state variable, and all trading fees will be sent to this address.
+
+### setFeeToSetter(address _feeToSetter) 
+- This function takes one argument, which is the address that can change the feeTo address. This is used as a security measure to prevent unauthorized changes to the feeTo address. Only the address set by this function can change the feeTo address.
+
+### feeTo() 
+- This function returns the address to which trading fees will be sent. This is the address that was set by the setFeeTo() function.
+
+### feeToSetter() 
+- This function returns the address that can change the feeTo address. This is the address that was set by the setFeeToSetter() function.
+
+### allPairs 
+- This variable is an array that contains the addresses of all the pairs that have been created through the createPair() function. Whenever a new pair is created, its address is added to the allPairs array. This variable allows anyone to see a list of all the pairs that have been created through the UniswapV2 Factory contract.
+
+### allPairsLength 
+- This variable is an integer that represents the length of the allPairs array. Whenever a new pair is created, the allPairsLength variable is incremented by one. This variable allows anyone to easily determine the number of pairs that have been created through the UniswapV2 Factory contract.
