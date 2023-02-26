@@ -10,13 +10,13 @@ The UniswapV2Router02.sol contract is the main router contract used in the Unisw
 - This function is called when the contract is deployed and sets the address of the Uniswap factory contract and the WETH (Wrapped Ether) contract.
 
 #### setRevertMsg: 
--This function sets the custom revert message that will be used for all subsequent failed transactions on this contract.
+- This function sets the custom revert message that will be used for all subsequent failed transactions on this contract.
 
 #### setFactory: 
 - This function allows the contract owner to update the address of the Uniswap factory contract.
 
 #### setRouter1: 
--This function allows the contract owner to update the address of the Uniswap V1 router contract.
+- This function allows the contract owner to update the address of the Uniswap V1 router contract.
 
 #### setPairInitHash: 
 - This function allows the contract owner to update the hash of the init code for creating Uniswap pairs.
