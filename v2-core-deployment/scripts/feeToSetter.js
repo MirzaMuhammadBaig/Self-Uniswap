@@ -1,16 +1,14 @@
 const { ethers } = require("ethers");
 require("dotenv").config();
-const { API_URL_INFURA, PRIVATE_KEY, uniswapV2FactoryAddress, PUBLIC_KEY} = process.env;
+const { API_URL_INFURA, uniswapV2FactoryAddress} = process.env;
 
-// set up provider and signer
+// set up provider
 const provider = new ethers.providers.JsonRpcProvider(API_URL_INFURA);
-const signer = new ethers.Wallet(PRIVATE_KEY, provider);
 
 // set up contract interface
 const uniswapV2FactoryABI = require("../artifacts/contracts/UniswapV2Factory.sol/UniswapV2Factory.json");
-const uniswapV2FactoryContract = new ethers.Contract(uniswapV2FactoryAddress, uniswapV2FactoryABI, signer);
+const uniswapV2FactoryContract = new ethers.Contract(uniswapV2FactoryAddress, uniswapV2FactoryABI, provider);
 
-// call setFeeToSetter function
-const feeToSetterAddress = PUBLIC_KEY; // example feeToSetter address
-const tx = await uniswapV2FactoryContract.setFeeToSetter(feeToSetterAddress);
-console.log("Transaction hash:", tx.hash);
+// call feeToSetter function
+const feeToSetter = await uniswapV2FactoryContract.feeToSetter();
+console.log("Fee setter address:", feeToSetter);
