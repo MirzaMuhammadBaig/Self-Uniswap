@@ -1,6 +1,6 @@
 const { ethers } = require("ethers");
 require("dotenv").config();
-const { API_URL_INFURA, PRIVATE_KEY, uniswapV2FactoryAddress, tokenAAddress, tokenBAddress} = process.env;
+const { API_URL_INFURA, uniswapV2FactoryAddress} = process.env;
 
 
 // set up provider
