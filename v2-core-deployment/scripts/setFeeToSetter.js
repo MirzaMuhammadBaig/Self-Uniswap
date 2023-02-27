@@ -8,9 +8,13 @@ const signer = new ethers.Wallet(PRIVATE_KEY, provider);
 
 // set up contract interface
 const uniswapV2FactoryABI = require("../artifacts/contracts/UniswapV2Factory.sol/UniswapV2Factory.json");
-const uniswapV2FactoryContract = new ethers.Contract(uniswapV2FactoryAddress, uniswapV2FactoryABI, signer);
+const uniswapV2FactoryContract = new ethers.Contract(uniswapV2FactoryAddress, uniswapV2FactoryABI.abi, signer);
 
 // call setFeeToSetter function
 const feeToSetterAddress = PUBLIC_KEY; // example feeToSetter address
-const tx = await uniswapV2FactoryContract.setFeeToSetter(feeToSetterAddress);
-console.log("Transaction hash:", tx.hash);
+
+async function setFeeToSetter() {
+    const tx = await uniswapV2FactoryContract.setFeeToSetter(feeToSetterAddress);
+    console.log("Transaction hash:", tx.hash);
+};
+setFeeToSetter();
