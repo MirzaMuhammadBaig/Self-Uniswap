@@ -24,7 +24,7 @@ async function swapTokensForTokens() {
     deadline,
     { gasLimit: 400000 }
   );
-  console.log("Transaction hash:", tx.hash);
+  console.log("Transaction successfull & Transaction hash is:", tx.hash);
 }
 
 swapTokensForTokens();
