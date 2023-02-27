@@ -14,8 +14,8 @@ const uniswapV2FactoryContract = new ethers.Contract(uniswapV2FactoryAddress, un
 const feeToAddress = PUBLIC_KEY; // example feeTo address
 
 async function setFeeTo() {
-    const tx = await uniswapV2FactoryContract.setFeeTo(feeToAddress, {gasLimit:100000});
+    const tx = await uniswapV2FactoryContract.setFeeTo(feeToAddress, {gasLimit:1000000});
     console.log("Transaction hash:", tx.hash);
-    // Transaction hash: 0x056eb76b68d65e0749698381422c8b971e1d3d3a4f8ab114eb24b4777744c001
+    // Transaction hash: 0x34dd41e73eae170321e0147a19df8b5673233f2bb0ff24d609c2fffdcd07d340
 };
 setFeeTo();

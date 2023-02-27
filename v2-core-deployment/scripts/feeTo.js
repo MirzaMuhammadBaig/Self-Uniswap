@@ -13,5 +13,6 @@ async function feeTo() {
     // call feeTo function
     const feeTo = await uniswapV2FactoryContract.feeTo();
     console.log("Fee recipient address:", feeTo);
+    // Fee recipient address: 0x107F6A9104de8d364449aeb3598fE61Af0E1F4F5
 };
 feeTo();
