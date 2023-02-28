@@ -28,7 +28,7 @@ npx hardhat run --network goerli scripts/deploy.js
 - 0x9ee7804153bb15fab282a80eeb871433d966ed0102af993529e9f8dde05aa829
 
 ##### Contract address of UniswapV2Router02:
-- 0xbaa4974844E0Cc51d5086877073AF10D346B34b6
+- 0xA2dD0C12b7e2D0c1b1ac7Bb2fd0A8826CD58A3A3
 
 ##### Goerli WETH Address:
 - 0xB4FBF271143F4FBf7B91A5ded31805e42b2208d6
