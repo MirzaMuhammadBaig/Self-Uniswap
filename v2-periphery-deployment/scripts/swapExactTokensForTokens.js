@@ -7,7 +7,7 @@ const wallet = new ethers.Wallet(PRIVATE_KEY, provider);
 
 const abi = require("../artifacts/contracts/UniswapV2Router02.sol/UniswapV2Router02.json");
 
-const contract = new ethers.Contract(routerAddress, abi, wallet);
+const contract = new ethers.Contract(routerAddress, abi.abi, wallet);
 
 const amountIn = ethers.utils.parseEther("1"); // 1 token
 const amountOutMin = ethers.utils.parseEther("0.5"); // minimum 0.5 tokens out
@@ -25,6 +25,7 @@ async function swapTokensForTokens() {
     { gasLimit: 400000 }
   );
   console.log("Transaction successfull & Transaction hash is:", tx.hash);
+  // Transaction successfull & Transaction hash is: 0x79cffbe3dd5251afbf6100d8b459b558e48f1c26694574f7a1dc657e7d7060c6
 }
 
 swapTokensForTokens();
