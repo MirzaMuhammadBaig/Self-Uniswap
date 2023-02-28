@@ -7,7 +7,7 @@ const wallet = new ethers.Wallet(PRIVATE_KEY, provider);
 
 const abi = require("../artifacts/contracts/UniswapV2Router02.sol/UniswapV2Router02.json");
 
-const contract = new ethers.Contract(routerAddress, abi, wallet);
+const contract = new ethers.Contract(routerAddress, abi.abi, wallet);
 
 const newRevertMsg = "<insert new custom revert message here>";
 

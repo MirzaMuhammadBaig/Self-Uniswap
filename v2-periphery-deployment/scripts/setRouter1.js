@@ -7,7 +7,7 @@ const wallet = new ethers.Wallet(PRIVATE_KEY, provider);
 
 const abi = require("../artifacts/contracts/UniswapV2Router02.sol/UniswapV2Router02.json");
 
-const contract = new ethers.Contract(routerAddress, abi, wallet);
+const contract = new ethers.Contract(routerAddress, abi.abi, wallet);
 
 const router1Address = "<insert new router1 address here>";
 
