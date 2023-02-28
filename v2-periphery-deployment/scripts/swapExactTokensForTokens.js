@@ -1,6 +1,6 @@
 const { ethers } = require("ethers");
 require("dotenv").config();
-const { API_URL_INFURA, routerAddress, PRIVATE_KEY, tokenAAddress, tokenBAddress, user} = process.env;
+const { API_URL_INFURA, routerAddress, PRIVATE_KEY, tokenAAddress, tokenBAddress, user } = process.env;
 
 const provider = new ethers.providers.JsonRpcProvider(API_URL_INFURA);
 const wallet = new ethers.Wallet(PRIVATE_KEY, provider);
@@ -22,7 +22,7 @@ async function swapTokensForTokens() {
     path,
     to,
     deadline,
-    { gasLimit: 400000 }
+    { gasLimit: 6000000 }
   );
   console.log("Transaction successfull & Transaction hash is:", tx.hash);
   // Transaction successfull & Transaction hash is: 0x79cffbe3dd5251afbf6100d8b459b558e48f1c26694574f7a1dc657e7d7060c6
