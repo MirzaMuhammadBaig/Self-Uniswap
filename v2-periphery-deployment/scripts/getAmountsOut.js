@@ -1,21 +1,24 @@
 const { ethers } = require("ethers");
 require("dotenv").config();
-const { API_URL_INFURA, routerAddress, tokenAAddress} = process.env;
+const { API_URL_INFURA, routerAddress, tokenAAddress, WETH_address} = process.env;
 
+// Initialize provider and signer
 const provider = new ethers.providers.JsonRpcProvider(API_URL_INFURA);
 
-// Define the contract ABI and address
-const abi = require("../artifacts/contracts/UniswapV2Router02.sol/UniswapV2Router02.json");
+// Initialize UniswapV2Router02 contract instance
+const routerAbi = require("../artifacts/contracts/UniswapV2Router02.sol/UniswapV2Router02.json");
+const routerContract = new ethers.Contract(routerAddress, routerAbi.abi, provider);
 
-const contract = new ethers.Contract(routerAddress, abi, provider);
+// Example trade: Swap 1 ETH for DAI
+const amountIn = ethers.utils.parseEther("0.0000000000000001");
+console.log(amountIn);
+const path = [WETH_address, tokenAAddress];
 
-const amountIn = ethers.utils.parseEther("1"); // 1 ETH
-const path = [ethers.constants.AddressZero, tokenAAddress]; // ETH to token
-
-async function getAmountsOut() {
-  const amounts = await contract.getAmountsOut(amountIn, path);
-  const amountOut = amounts[amounts.length - 1]; // the last element in the array is the output amount
-  console.log("Amount out:", ethers.utils.formatEther(amountOut));
-}
-
-getAmountsOut();
+// Call getAmountsOut function
+routerContract.getAmountsOut(amountIn, path)
+  .then(amounts => {
+    console.log("Expected output amounts:", amounts.map(a => ethers.utils.formatEther(a)));
+  })
+  .catch(error => {
+    console.error("Error calling getAmountsOut:", error);
+  });
