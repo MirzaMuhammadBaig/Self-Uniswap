@@ -42,7 +42,7 @@ module.exports = {
       gasMultiplier: 1,
       gas: 21000000,
       gasPrice: 80000000000,
-      // timeout: 20000,
+      timeout: 20000,
       saveDeployments: true,
       chainId: 5,
     },
