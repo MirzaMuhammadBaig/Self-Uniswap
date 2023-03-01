@@ -34,4 +34,4 @@ npx hardhat run --network goerli scripts/deploy.js
 - 0xff528902bc29170b459f0189743501181a3d0242ff611eb4e4123051827ca728
 
 ##### Contract Address Of Contract:
-- 0xbe72909609e9B7Fb1546BA46420b3482f89837a5
+- 0xadb9C2B325e200064cBCb86f98EA4503F7Cbae0e
