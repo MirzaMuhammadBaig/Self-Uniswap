@@ -13,6 +13,6 @@ async function feeToSetter() {
     // call feeToSetter function
     const feeToSetter = await uniswapV2FactoryContract.feeToSetter();
     console.log("Fee setter address:", feeToSetter);
-    // Fee setter address: 0x107F6A9104de8d364449aeb3598fE61Af0E1F4F5
+    // Fee setter address: 0xb189d95c7CbAA430Cd835c1191A5CF60E008A1b1
 };
 feeToSetter();

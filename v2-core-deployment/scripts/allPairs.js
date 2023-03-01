@@ -20,6 +20,6 @@ async function allPairs() {
     pairs.push(pairAddress);
   }
   console.log("Pairs:", pairs);
-  //Pairs: [ '0xB071F63d994B13f7Cf29DC985Dd398A907cd975F' ]
+  // Pairs: [ '0x86B56B345b8F1bfbB5f422652506102877e80B20' ]
 };
 allPairs();

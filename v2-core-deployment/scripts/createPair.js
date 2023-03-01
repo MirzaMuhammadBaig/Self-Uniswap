@@ -13,6 +13,6 @@ const uniswapV2FactoryContract = new ethers.Contract(uniswapV2FactoryAddress, un
 async function createPair() {
     const tx = await uniswapV2FactoryContract.createPair(tokenAAddress, tokenBAddress);
     console.log("Transaction hash:", tx.hash);
-    // Transaction hash: 0xcf3c4d1f9ee8a0bf33f5ddb28e611478fcf2b56619224ec7e0c87efb2441260a
-};
+    // Transaction hash: 0xa5b93d84c8a2ba438da07f684e2c5da1c610c015b19dd2898c88f6f7c1cb6169};
+}
 createPair();

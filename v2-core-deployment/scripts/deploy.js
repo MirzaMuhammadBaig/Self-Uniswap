@@ -1,5 +1,6 @@
 const hre = require("hardhat");
-const fee_to_set = "0xb189d95c7CbAA430Cd835c1191A5CF60E008A1b1";
+require("dotenv").config();
+const { fee_to_set } = process.env;
 
 async function main() {
   const UniswapV2Factory = await hre.ethers.getContractFactory("UniswapV2Factory");

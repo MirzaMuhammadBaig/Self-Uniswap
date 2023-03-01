@@ -13,6 +13,6 @@ const uniswapV2FactoryContract = new ethers.Contract(uniswapV2FactoryAddress, un
 async function getPair() {
     const pairAddress = await uniswapV2FactoryContract.getPair(tokenAAddress, tokenBAddress);
     console.log("Pair address:", pairAddress);
-    // Pair address: 0xB071F63d994B13f7Cf29DC985Dd398A907cd975F
-};
+    // Pair address: 0x86B56B345b8F1bfbB5f422652506102877e80B20;
+}
 getPair();

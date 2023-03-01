@@ -7,7 +7,7 @@ const wallet = new ethers.Wallet(PRIVATE_KEY, provider);
 
 const abi = require("../artifacts/contracts/UniswapV2Router02.sol/UniswapV2Router02.json");
 
-const contract = new ethers.Contract(routerAddress, abi, wallet);
+const contract = new ethers.Contract(routerAddress, abi.abi, wallet);
 
 const amountADesired = ethers.utils.parseEther("10"); // 10 token A desired
 const amountBDesired = ethers.utils.parseEther("5"); // 5 token B desired
@@ -26,7 +26,7 @@ async function addLiquidity() {
     amountBMin,
     to,
     deadline,
-    { gasLimit: 400000, value: 0 } // no ETH to send
+    { gasLimit: 100000, value: 0 } // no ETH to send
   );
   console.log("Transaction hash:", tx.hash);
 }
