@@ -28,13 +28,13 @@ npx hardhat compile
 npx hardhat run --network goerli scripts/deploy.js
 ```
 
-<!-- ##### Transaction Hash:
+##### Transaction Hash:
 
-- 0xd105f429e82beaae7617429ee522dc1f1d59dc38be463b5356e4503748690be3 -->
+- 0x5060acfdcdb733670daff4135f805de61ea9b12668c634358e08c0f8bb3f7527
 
 ##### Contract address of UniswapV2Factory:
 
-- 0xe7BaE130C3f470bef97Cb5422900732F776ed10e
+- 0xef030f901571359827ed7835b8fe95be5dff76ea
 
 ##### Goerli WETH Address:
 
