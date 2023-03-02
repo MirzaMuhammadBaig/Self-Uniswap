@@ -15,7 +15,7 @@ module.exports = {
       url: API_URL_INFURA,
       accounts: [`0x${PRIVATE_KEY}`],
       gasMultiplier: 1,
-      gas: 2100000,
+      gas: 21000000,
       gasPrice: 8000000000,
       timeout: 20000,
       saveDeployments: true,

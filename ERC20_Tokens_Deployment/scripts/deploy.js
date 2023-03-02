@@ -12,12 +12,10 @@ async function main() {
   const token_3 = await TOKEN_3.deploy(10000000);
   const token_4 = await TOKEN_4.deploy(10000000);
 
-
   await token_1.deployed();
   await token_2.deployed();
   await token_3.deployed();
   await token_4.deployed();
-
 
   console.log(
     `TOKEN_1 contract deployed at: ${token_1.address}`
