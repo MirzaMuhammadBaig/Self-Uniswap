@@ -34,7 +34,7 @@ npx hardhat run --network goerli scripts/deploy.js
 
 ##### Contract address of UniswapV2Factory:
 
-- 0xbc187CC0E46d1038fEB64Fd685dbD4Bff7ba14b5
+- 0xe7BaE130C3f470bef97Cb5422900732F776ed10e
 
 ##### Goerli WETH Address:
 
