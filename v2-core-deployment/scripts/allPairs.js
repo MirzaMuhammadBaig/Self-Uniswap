@@ -1,6 +1,6 @@
 const { ethers } = require("ethers");
 require("dotenv").config();
-const { API_URL_INFURA, uniswapV2FactoryAddress} = process.env;
+const { API_URL_INFURA, uniswapV2FactoryAddress } = process.env;
 
 // set up provider
 const provider = new ethers.providers.JsonRpcProvider(API_URL_INFURA);
@@ -12,7 +12,7 @@ const uniswapV2FactoryContract = new ethers.Contract(uniswapV2FactoryAddress, un
 async function allPairs() {
   // call allPairsLength function to get the total number of pairs
   const allPairsLength = await uniswapV2FactoryContract.allPairsLength();
-  
+
   // loop through all pairs and get their addresses
   const pairs = [];
   for (let i = 0; i < allPairsLength; i++) {
@@ -20,6 +20,6 @@ async function allPairs() {
     pairs.push(pairAddress);
   }
   console.log("Pairs:", pairs);
-  // Pairs: [ '0x86B56B345b8F1bfbB5f422652506102877e80B20' ]
+  // Pairs: [ '0xde21b10fAf1FB9C6351a65DbD9088746b098b649' ]
 };
 allPairs();

@@ -13,6 +13,6 @@ const uniswapV2FactoryContract = new ethers.Contract(uniswapV2FactoryAddress, un
 async function getInitCode() {
     const init_code_hash = await uniswapV2FactoryContract.INIT_CODE_HASH();
     console.log("INIT CODE HASH:", init_code_hash);
-    // INIT CODE HASH: 0x7beb88f9bbd0ed45ee5366b951e02100d51484639e43d50441ad9504f0e67d9d
+    // INIT CODE HASH: 0x2893344183ae74a6ae87c3bdd3e4426de10edbdee818b0afcccdb20d81f9821c
 }
 getInitCode();

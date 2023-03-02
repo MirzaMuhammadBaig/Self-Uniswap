@@ -1,6 +1,6 @@
 const { ethers } = require("ethers");
 require("dotenv").config();
-const { API_URL_INFURA, PRIVATE_KEY, uniswapV2FactoryAddress, fee_to} = process.env;
+const { API_URL_INFURA, PRIVATE_KEY, uniswapV2FactoryAddress, fee_to } = process.env;
 
 // set up provider and signer
 const provider = new ethers.providers.JsonRpcProvider(API_URL_INFURA);
@@ -14,8 +14,8 @@ const uniswapV2FactoryContract = new ethers.Contract(uniswapV2FactoryAddress, un
 const feeToAddress = fee_to; // example feeTo address
 
 async function setFeeTo() {
-    const tx = await uniswapV2FactoryContract.setFeeTo(feeToAddress, {gasLimit:100000});
+    const tx = await uniswapV2FactoryContract.setFeeTo(feeToAddress, { gasLimit: 100000 });
     console.log("Transaction hash:", tx.hash);
-    // Transaction hash: 0x8d09210b0bb25c6bd6ee12efdfd28c3e5a67d84e405a9fc94cc51c6bd53612da
+    // Transaction hash: 0x298505ff7bdf1fb17c2a617e3fbed0919cf9c467df4bc8b480d6b23f51c3cb6a
 };
 setFeeTo();

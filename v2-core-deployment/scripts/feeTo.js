@@ -1,6 +1,6 @@
 const { ethers } = require("ethers");
 require("dotenv").config();
-const { API_URL_INFURA, uniswapV2FactoryAddress} = process.env;
+const { API_URL_INFURA, uniswapV2FactoryAddress } = process.env;
 
 // set up provider
 const provider = new ethers.providers.JsonRpcProvider(API_URL_INFURA);
