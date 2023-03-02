@@ -34,7 +34,7 @@ npx hardhat run --network goerli scripts/deploy.js
 - TOKEN_4 tx_hash: 0xa07b34536ac6f9fa09291b9b2f883c1ba4a740f12f8f8a13160bae15c96c6a59
 
 ##### Contract Address Of Contract:
-- TOKEN_1 contract deployed at: 0xb2c635D18c71C5BA9B4714BbA33752DB67C1884B
-- TOKEN_2 contract deployed at: 0x3cD5fC1330Ad9DB6240bBaBa7495dC266922D45c
-- TOKEN_3 contract deployed at: 0x2cF595D82d0f93A88Cfd3C705f7C5f23a89047a1
-- TOKEN_4 contract deployed at: 0xc8de17083E29ED2ECD11d97237f9327279720FE2
+- TOKEN_1 contract deployed at: 0xb4f945436143B9462eAE3DdA48F2bf3cc7bFEA6A
+- TOKEN_2 contract deployed at: 0x879D9c768FE35d5e4293e0D85Dc51c6F6ec85602
+- TOKEN_3 contract deployed at: 0x3f346fF21F697BffB3412aE78C2c68c9797620bd
+- TOKEN_4 contract deployed at: 0x9b8e3b613A365E3F78387BE7148D488F35Dbc73D
