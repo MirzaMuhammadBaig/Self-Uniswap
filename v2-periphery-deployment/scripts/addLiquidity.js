@@ -29,6 +29,7 @@ async function addLiquidity() {
     { gasLimit: 100000, value: 0 } // no ETH to send
   );
   console.log("Transaction hash:", tx.hash);
+  // Transaction hash: 0x51921ea78d2fc7a48e2af16c57099ff9704a0ac3f52f7dcf93c0ed627774dd95
 }
 
 addLiquidity();
