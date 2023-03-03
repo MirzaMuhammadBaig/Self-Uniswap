@@ -1,14 +1,20 @@
 const { ethers } = require("ethers");
 require("dotenv").config();
+
+// imports from .env file
 const { API_URL_INFURA, routerAddress, PRIVATE_KEY, tokenAAddress, tokenBAddress, user } = process.env;
 
+// Define the contract ABI
+const abi = require("../artifacts/contracts/UniswapV2Router02.sol/UniswapV2Router02.json");
+
+// Connect to Ethereum network
 const provider = new ethers.providers.JsonRpcProvider(API_URL_INFURA);
 const wallet = new ethers.Wallet(PRIVATE_KEY, provider);
 
-const abi = require("../artifacts/contracts/UniswapV2Router02.sol/UniswapV2Router02.json");
-
+// Create a contract instance
 const contract = new ethers.Contract(routerAddress, abi.abi, wallet);
 
+// create the parameters
 const amountIn = ethers.BigNumber.from('300000000000000000');//REMOVED TWO ZEROS FROM BOTH
 console.log("amountIn", amountIn);
 const amountOutMin = ethers.BigNumber.from('200000000000000000');
@@ -22,7 +28,7 @@ console.log("deadline", deadline);
 
 async function swapTokensForTokens() {
   const signer = contract.connect(wallet);
-
+  // Invoke the setFactory function
   const tx = await signer.functions.swapExactTokensForTokens(
     amountIn,
     amountOutMin,
