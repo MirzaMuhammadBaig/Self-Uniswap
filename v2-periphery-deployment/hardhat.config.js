@@ -15,23 +15,9 @@ module.exports = {
             enabled: true,
             runs: 400
           },
-          evmVersion: "istanbul",
-          outputSelection: {
-            "*": {
-              "": ["ast"],
-              "*": [
-                "evm.bytecode.object",
-                "evm.deployedBytecode.object",
-                "abi",
-                "evm.bytecode.sourceMap",
-                "evm.deployedBytecode.sourceMap",
-                "metadata"
-              ]
-            }
-          }
-        }
-      }
-    ]
+        },
+      },
+    ],
   },
   defaultNetwork: "goerli",
   networks: {
