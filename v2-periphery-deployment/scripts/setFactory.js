@@ -1,5 +1,7 @@
 const { ethers } = require("ethers");
 require("dotenv").config();
+
+// imports from .env file
 const { API_URL_INFURA, PRIVATE_KEY, routerAddress} = process.env;
 
 // Define the contract ABI and address
@@ -13,7 +15,7 @@ const signer = new ethers.Wallet(PRIVATE_KEY, provider);
 const routerContract = new ethers.Contract(routerAddress, routerABI.abi, signer);
 
 // Define the new factory address
-const newFactoryAddress = "<address-of-new-UniswapV2Factory-contract>";
+const newFactoryAddress = "address-of-new-UniswapV2Factory-contract";
 
 async function setFactory() {
     // Invoke the setFactory function

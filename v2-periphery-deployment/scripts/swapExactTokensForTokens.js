@@ -15,7 +15,7 @@ const wallet = new ethers.Wallet(PRIVATE_KEY, provider);
 const contract = new ethers.Contract(routerAddress, abi.abi, wallet);
 
 // create the parameters
-const amountIn = ethers.BigNumber.from('300000000000000000');//REMOVED TWO ZEROS FROM BOTH
+const amountIn = ethers.BigNumber.from('300000000000000000');
 console.log("amountIn", amountIn);
 const amountOutMin = ethers.BigNumber.from('200000000000000000');
 console.log("amountOutMin", amountOutMin);
