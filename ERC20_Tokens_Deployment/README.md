@@ -1,5 +1,10 @@
 # ERC20 TOKENS CONTRACT DEPLOYMENT
 
+```
+Why I am create ERC20_Tokens_Deployement Folder:
+Because I was do the swaping of different tokens using uniswap contracts myself, so that's why I was have been created tokens contract and then deployed on goerli mainnet using ether.js library in hardhat framework.
+```
+
 ### For deploy the contracts:
 
 1. Install hardhat library, using run :
