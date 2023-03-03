@@ -2,7 +2,7 @@ const { ethers } = require("ethers");
 require("dotenv").config();
 
 // imports from .env file
-const { API_URL_INFURA, routerAddress, PRIVATE_KEY, tokenAAddress, tokenBAddress, user} = process.env;
+const { API_URL_INFURA, routerAddress, PRIVATE_KEY, TOKEN_1, TOKEN_2, user} = process.env;
 
 // Define the contract ABI
 const abi = require("../artifacts/contracts/UniswapV2Router02.sol/UniswapV2Router02.json");
@@ -26,8 +26,8 @@ async function addLiquidity() {
   const signer = contract.connect(wallet);
   // Invoke the approve function
   const tx = await signer.functions.addLiquidity(
-    tokenAAddress,
-    tokenBAddress,
+    TOKEN_1,
+    TOKEN_2,
     amountADesired,
     amountBDesired,
     amountAMin,

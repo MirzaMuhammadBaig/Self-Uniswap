@@ -2,7 +2,7 @@ const { ethers } = require("ethers");
 require("dotenv").config();
 
 // imports from .env file
-const { API_URL_INFURA, routerAddress, PRIVATE_KEY, tokenAAddress, tokenBAddress, user } = process.env;
+const { API_URL_INFURA, routerAddress, PRIVATE_KEY, TOKEN_1, user } = process.env;
 
 // Define the contract ABI
 const abi = require("../artifacts/contracts/UniswapV2Router02.sol/UniswapV2Router02.json");
@@ -19,7 +19,7 @@ const amountIn = ethers.BigNumber.from('300000000000000000');
 console.log("amountIn", amountIn);
 const amountOutMin = ethers.BigNumber.from('200000000000000000');
 console.log("amountOutMin", amountOutMin);
-const path = [tokenAAddress, tokenBAddress]; // token1 to token2
+const path = [TOKEN_1, tokenBAddress]; // token1 to token2
 console.log("path", path);
 const to = user; // recipient address
 console.log("to", to);

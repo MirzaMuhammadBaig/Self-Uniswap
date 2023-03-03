@@ -2,7 +2,7 @@ const { ethers } = require("ethers");
 require("dotenv").config();
 
 // imports from .env file
-const { API_URL_INFURA, routerAddress, tokenAAddress, WETH_address} = process.env;
+const { API_URL_INFURA, routerAddress, TOKEN_1, WETH_address} = process.env;
 
 // Define the contract ABI
 const routerAbi = require("../artifacts/contracts/UniswapV2Router02.sol/UniswapV2Router02.json");
@@ -15,7 +15,7 @@ const routerContract = new ethers.Contract(routerAddress, routerAbi.abi, provide
 
 // Example trade: Swap 1 ETH for DAI
 const amountIn = ethers.utils.parseEther("1000000000000000000"); // 1 ETH
-const path = [WETH_address, tokenAAddress];
+const path = [WETH_address, TOKEN_1];
 
 // Call getAmountsOut function
 async function getAmountsOut() {

@@ -2,7 +2,7 @@ const { ethers } = require("ethers");
 require("dotenv").config();
 
 // imports from .env file
-const { API_URL_INFURA, routerAddress, tokenAAddress, WETH_address} = process.env;
+const { API_URL_INFURA, routerAddress, TOKEN_1, WETH_address} = process.env;
 
 // Define the contract ABI
 const abi = require("../artifacts/contracts/UniswapV2Router02.sol/UniswapV2Router02.json");
@@ -15,7 +15,7 @@ const contract = new ethers.Contract(routerAddress, abi.abi, provider);
 
 // Sets the function parameters
 const amountOut = ethers.BigNumber.from('1000000000000000000000'); // 1000 tokens
-const path = [tokenAAddress, WETH_address]; // token to ETH
+const path = [TOKEN_1, WETH_address]; // token to ETH
 
 async function getAmountsIn() {
   // Invoke the approve function
