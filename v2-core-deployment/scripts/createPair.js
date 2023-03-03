@@ -2,7 +2,7 @@ const { ethers } = require("ethers");
 require("dotenv").config();
 
 // imports from .env file
-const { API_URL_INFURA, PRIVATE_KEY, uniswapV2FactoryAddress, tokenAAddress, tokenBAddress } = process.env;
+const { API_URL_INFURA, PRIVATE_KEY, uniswapV2FactoryAddress, TOKEN_1, TOKEN_2 } = process.env;
 
 // Define the contract ABI
 const uniswapV2FactoryABI = require("../artifacts/contracts/UniswapV2Factory.sol/UniswapV2Factory.json");
@@ -17,7 +17,7 @@ const uniswapV2FactoryContract = new ethers.Contract(uniswapV2FactoryAddress, un
 async function createPair() {
     const signer = uniswapV2FactoryContract.connect(wallet);
     // Invoke the approve function
-    const tx = await signer.functions.createPair(tokenAAddress, tokenBAddress);
+    const tx = await signer.functions.createPair(TOKEN_1, TOKEN_2);
     console.log("Transaction hash:", tx.hash);
     // Transaction hash: 0x64abdcfdebefdf3a1fd8408104bf07cab2b23b30cd462de0d316ac503482902f};
 }
