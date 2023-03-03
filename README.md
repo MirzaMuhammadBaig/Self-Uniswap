@@ -1,5 +1,14 @@
 # This is my second skill up task from antematter.
 
+
+### This repo have 5 folders:
+
+1. [ERC20_Tokens_Deployment](ERC20_Tokens_Deployment): In this folder I am creating token contracts, deployed and invoke for the use in swaping in [v2-periphery-deployment](v2-periphery-deployment).
+2. [v2-core](v2-core): In this folder I have clone the uniswap v2-core repo.
+3. [v2-core-deployment](v2-core-deployment): In this folder, I have take the contracts from v2-core and doing deployment & invoking of that's contracts.
+4. [v2-periphery](v2-periphery): In this folder I have clone the uniswap v2-periphery repo.
+5. [v2-periphery-deployment](v2-periphery-deployment): In this folder, I have take the contracts from v2-periphery and doing deployment & invoking of that's contracts.
+
 ## Skill up task 2
 
 As part of the Solidity DeFi Skill up Task, you need to:
