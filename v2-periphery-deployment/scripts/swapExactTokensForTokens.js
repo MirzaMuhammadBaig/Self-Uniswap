@@ -9,14 +9,21 @@ const abi = require("../artifacts/contracts/UniswapV2Router02.sol/UniswapV2Route
 
 const contract = new ethers.Contract(routerAddress, abi.abi, wallet);
 
-const amountIn = ethers.utils.parseEther("1"); // 1 token
-const amountOutMin = ethers.utils.parseEther("0.5"); // minimum 0.5 tokens out
+const amountIn = ethers.BigNumber.from('300000000000000000');//REMOVED TWO ZEROS FROM BOTH
+console.log("amountIn", amountIn);
+const amountOutMin = ethers.BigNumber.from('200000000000000000');
+console.log("amountOutMin", amountOutMin);
 const path = [tokenAAddress, tokenBAddress]; // token1 to token2
+console.log("path", path);
 const to = user; // recipient address
+console.log("to", to);
 const deadline = Math.floor(Date.now() / 1000) + 60 * 10; // 10 minutes from now
+console.log("deadline", deadline);
 
 async function swapTokensForTokens() {
-  const tx = await contract.swapExactTokensForTokens(
+  const signer = contract.connect(wallet);
+
+  const tx = await signer.functions.swapExactTokensForTokens(
     amountIn,
     amountOutMin,
     path,
@@ -25,7 +32,7 @@ async function swapTokensForTokens() {
     { gasLimit: 600000 }
   );
   console.log("Transaction successfull & Transaction hash is:", tx.hash);
-  // Transaction successfull & Transaction hash is: 0x79cffbe3dd5251afbf6100d8b459b558e48f1c26694574f7a1dc657e7d7060c6
+  // Transaction successfull & Transaction hash is: 0x97634ada78bfa996d7f703d921a801c68530cb6c57b53d542eb8a08f9e3a0718
 }
 
 swapTokensForTokens();
