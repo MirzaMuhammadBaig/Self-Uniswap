@@ -7,7 +7,7 @@
 2. [v2-core-deployment](v2-core-deployment): In this folder, I have take the contracts from uniswap v2-core and doing the deployment & invoking of that contracts.
 3. [v2-periphery-deployment](v2-periphery-deployment): In this folder, I have take the contracts from uniswap v2-periphery and doing the deployment & invoking of that contracts.
 
-## Skill up task 2
+## Defi Training
 
 As part of the Solidity DeFi Skill up Task, you need to:
 1.  Use UniswapV2 and deploy its smart contract on the Goerli Testnet.
